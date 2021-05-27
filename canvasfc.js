@@ -40,5 +40,13 @@ _("#reset-canvas").addEventListener("click", function(){
 _("#save-canvas").addEventListener("click", function(){
 	//그림판에다 그린 파일을 내보낸 뒤, 적어둔 이름과 고른 파일규격에 따라 그림파일저장
 	//지금으로썬, "sketch.png"라는 이름으로 저장됨
-	saveCanvas(canvas, "sketch", "png");
+	//saveCanvas(canvas, "sketch", "png");
+	let saveImg=(imgname) => {
+		let toSaveImg = document.createElement('toSaveImg');
+		toSaveImg.href = canvas.toDataURL("image/png");
+		toSaveImg.download=imgname;
+		document.body.appendChild(toSaveImg);
+		toSaveImg.click();
+	}
+	
 });
