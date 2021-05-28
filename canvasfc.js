@@ -1,17 +1,25 @@
 function _(selector) {
-	return
-	document.querySelector(selector);
+	return document.querySelector(selector);
 }
 
 function setup() {
-	let canvas = createCanvas(650, 600);
-	canvas.parent("canvas-wrapper");
+	const canvas = document.querySelector("#canvas-wrapper");
+	//canvas.parent("canvas-wrapper");
+	const ctx = canvas.getContext("2d");
+	
+	canvas.height = window.innerHeight;
+	canvas.width=window.innerWidth;
 	firstWhiteBG(); //맨처음바탕이 하양으로 시작. 추후, 투명, 하양, 또는 그림파일넣은뒤 시작할지 달라지는것까지 고려할 예정
 }
 
 function firstWhiteBG() {
 	// 하얀 바탕으로 시작하기를 정해둠으로써, 하얀 바탕으로 시작
 	background(255);
+}
+
+function firstTransparentBG() {
+	// 투명바탕으로 시작하기를 정해둠으로써, 투명바탕으로 시작
+	background(transparent);
 }
 
 function mouseDragged() {
