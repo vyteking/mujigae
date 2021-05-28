@@ -4,7 +4,7 @@ function _(selector) {
 
 function setup() {
 	const canvas = document.querySelector("#canvas-wrapper");
-	//canvas.parent("canvas-wrapper");
+	canvas.parent("canvas-wrapper");
 	const ctx = canvas.getContext("2d");
 	
 	canvas.height = window.innerHeight;
