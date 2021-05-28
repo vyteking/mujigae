@@ -3,12 +3,11 @@ function _(selector) {
 }
 
 function setup() {
-	const canvas = document.querySelector("#canvas-wrapper");
+	var canvasHeight=800;
+	var canvasWidth=600;
+	let canvas = createCanvas(canvasHeight, canvasWidth);
 	canvas.parent("canvas-wrapper");
 	const ctx = canvas.getContext("2d");
-	
-	canvas.height = window.innerHeight;
-	canvas.width=window.innerWidth;
 	firstWhiteBG(); //맨처음바탕이 하양으로 시작. 추후, 투명, 하양, 또는 그림파일넣은뒤 시작할지 달라지는것까지 고려할 예정
 }
 
@@ -23,10 +22,10 @@ function firstTransparentBG() {
 }
 
 function mouseDragged() {
-	let type = _("#pen-pencil").checked?"pencil":"eraser";
+	let type = _("#pendraw").checked?"pendraw":"eraser";
 	let size = parseInt(_("#pen-size").value);
 	let colour = _("#pen-colour").value;
-	if(type=='pencil') {
+	if(type=='pendraw') {
 		//붓을 사용함으로써, 마우스화살표의 가로세로위지와 붓크기에 맞춰 그림을 그림 
 		fill(colour); //빛깔채우기는 지정된 빛깔로 그려짐
 		stroke(colour); //지정된 빛깔에 따라 화살표빛깔이 달라짐

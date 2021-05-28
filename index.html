@@ -4,15 +4,15 @@
 		<meta charset="utf-8">
 		<link href="./styles.css" rel="stylesheet" type="text/css" />
 		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-		<title>Canvas</title>
+		<title>무지개그림판</title>
 	</head>
 	<div class='app'>
 		<div class="controls">
 			<div class="title">Painter</div>
 			<div class="type">
-				<input type="radio" name="pen-type" id="pen-pencil" checked>
-				<label for "pen-pencil">
-					<i class="fa fa-pencil"></i>
+				<input type="radio" name="pen-type" id="pendraw" checked>
+				<label for "pendraw">
+					<i class="fa fa-drawpen"></i>
 				</label>
 				<input type="radio" name="pen-type" id="eraser">
 				<label for "eraser">
@@ -28,7 +28,7 @@
 				<input type="color" id="pen-colour" value="#000">
 			</div>
 			<div class="actions">
-				<button id="SelectColour">Select Colour</button>
+				<button id="SelectColourFromCanvas">Select Colour From Canvas</button>
 				<button id="undowork">Undo</button>
 				<button id="redowork">Redo</button>
 				<button id="reset-canvas">Reset</button>
@@ -37,8 +37,7 @@
 		</div>
 		<div id="canvas-wrapper"></div>
 	</div>
+	<script src="./canvasfc.js"></script>
 	<body>
-		<script src="canvasfc.js"></script>
-		<canvas id="canvas-wrapper"></canvas>
 	</body>
 </html>
