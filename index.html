@@ -10,13 +10,13 @@
 		<div class="controls">
 			<div class="title">Painter</div>
 			<div class="type">
-				<input type="radio" name="pen-type" id="pendraw" checked>
-				<label for "pendraw">
-					<i class="fa fa-drawpen"></i>
+				<input type="radio" name="pen-type" id="pen-pencil" checked>
+				<label for "pen-pencil">
+					<i class="fa fa-pencil"></i>
 				</label>
-				<input type="radio" name="pen-type" id="eraser">
-				<label for "eraser">
-					<i class="fa fa-eraser"></i>
+				<input type="radio" name="pen-type" id="pen-brush">
+				<label for "pen-brush">
+					<i class="fa fa-pen-brush"></i>
 				</label>
 			</div>
 			<div class="size">
@@ -35,9 +35,11 @@
 				<button id="save-canvas">Save</button>
 			</div>
 		</div>
-		<div id="canvas-wrapper"></div>
+		<div id="canvas-wrapper">
+			<script src="./canvasfc.js"></script>
+		</div>
 	</div>
-	<script src="./canvasfc.js"></script>
 	<body>
+		
 	</body>
 </html>

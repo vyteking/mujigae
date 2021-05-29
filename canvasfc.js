@@ -3,9 +3,9 @@ function _(selector) {
 }
 
 function setup() {
-	var canvasHeight=800;
-	var canvasWidth=600;
-	let canvas = createCanvas(canvasHeight, canvasWidth);
+	var canvasHeight=window.innerHeight;
+	var canvasWidth=window.innerWidth;
+	let canvas = createCanvas(canvasWidth, canvasHeight);
 	canvas.parent("canvas-wrapper");
 	const ctx = canvas.getContext("2d");
 	firstWhiteBG(); //맨처음바탕이 하양으로 시작. 추후, 투명, 하양, 또는 그림파일넣은뒤 시작할지 달라지는것까지 고려할 예정
